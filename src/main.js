@@ -60,5 +60,5 @@
 
     document.querySelector('#players').innerHTML = leaderboardHTML;
     document.querySelector('#market').innerHTML = marketHTML;
-    document.querySelector('#beach').style.height = `${players.length * 138}px`; // 117 + 21
+    document.querySelector('#beach').style.height = `${players.length * 140}px`; // 117 + 21
 })();
