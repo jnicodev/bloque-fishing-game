@@ -10,14 +10,24 @@ export default defineConfig({
                 name: 'Bloque Fish Game',
                 short_name: 'BFG',
                 description: 'Presented by Jnico',
-                theme_color: '#DDDDDD',
+                theme_color: '#86c06c',
                 icons: [
                     {
                         "src": "/sprites/fish.svg",
                         "type": "image/svg+xml",
                         "sizes": "any",
                         "purpose": "any"
-                    }
+                    },
+                    {
+                        "src": "/sprites/icon-192.png",
+                        "type": "image/png",
+                        "sizes": "192x192",
+                    },
+                    {
+                        "src": "/sprites/icon-512.png",
+                        "type": "image/png",
+                        "sizes": "512x512",
+                    },
                 ],
             },
             registerType: 'autoUpdate',
