@@ -30,7 +30,7 @@
 
             <div class="size-10 fish ${getFishClass()} animate-bounce hidden sm:block"></div>
 
-            <div class="w-full bg-amber-600 py-6 pl-10 border-2 border-r-0 border-black rounded-bl-lg relative wood ${getWoodClass(player.rank)}">
+            <div class="w-full texture-wood bg-amber-600 py-6 pl-10 border-2 border-r-0 border-black rounded-bl-lg relative wood ${getWoodClass(player.rank)}">
                 <div class="size-10 ${getFishermanClass(player.rank)} absolute -left-3 -top-1"></div>
                 <div class="flex flex-col">
                     <span>${player.username} lvl. ${player.level}</span>
