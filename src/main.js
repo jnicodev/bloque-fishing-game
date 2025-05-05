@@ -30,6 +30,8 @@
         return rand === 0 ? 'opacity-0' : 'opacity-100';
     };
 
+    const simplifyAmount = amount => Math.floor(amount / 1000) + 'k';
+
     const leaderboardHTML = players.map(player => `
         <div class='flex items-end gap-10'>
             <span class="font-bold text-2xl text-center text-white ${ getBadgeClass(player.rank) } px-3 rounded-full self-center">${player.rank}</span>
@@ -40,8 +42,8 @@
                 <div class="size-10 ${getFishermanClass(player.rank)} absolute -left-3 -top-1"></div>
                 <div class="flex flex-col">
                     <span>${player.username} lvl. ${player.level}</span>
-                    <span class="text-sm">Gold ${Math.floor(player.gold / 1000)}k</span>
-                    <span class="text-sm">XP. ${Math.floor(player.xp / 1000)}k</span>
+                    <span class="text-sm">Gold ${simplifyAmount(player.gold)}</span>
+                    <span class="text-sm">XP. ${simplifyAmount(player.xp)}</span>
                 </div>
             </div>
         </div>
@@ -53,7 +55,7 @@
             <div class="min-w-10 h-10 box"></div>
             <div class="font-bold text-xs flex flex-col">
                 <div class="text-nowrap">${item.name}</div>
-                <div class="text-amber-600">${item.cost / 1000}k</div>
+                <div class="text-amber-600">${simplifyAmount(item.cost)}</div>
             </div>
         </div>
     `).join('');
