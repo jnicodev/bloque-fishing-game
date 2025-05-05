@@ -2,6 +2,7 @@
 
 .texture-dot {
     background-image: url("/public/sprites/texture.svg");
+    background-size: 7px;
 }
 
 .texture-wood {
