@@ -14,10 +14,16 @@
     }[rank] || 'fisherman-4');
 
     const getWoodClass = rank => ({
-        1: 'font-bold text-white border-b-12',
-        2: 'font-bold text-amber-100 border-b-7',
-        3: 'font-bold text-amber-200 border-b-5'
-    }[rank] || 'font-medium border-b-3');
+        1: 'font-bold text-white border-b-15',
+        2: 'font-bold text-white border-b-12',
+        3: 'font-bold text-white border-b-10'
+    }[rank] || 'font-medium border-b-5');
+
+    const getBadgeClass = rank => ({
+        1: 'bg-yellow-700',
+        2: 'bg-teal-700',
+        3: 'bg-orange-700'
+    }[rank] || 'bg-black');
 
     const getFishClass = () => {
         const rand = Math.floor(Math.random() * 3);
@@ -26,7 +32,7 @@
 
     const leaderboardHTML = players.map(player => `
         <div class='flex items-end gap-10'>
-            <span class="font-bold text-2xl text-center text-white bg-black px-3 rounded-full self-center">${player.rank}</span>
+            <span class="font-bold text-2xl text-center text-white ${ getBadgeClass(player.rank) } px-3 rounded-full self-center">${player.rank}</span>
 
             <div class="size-10 fish ${getFishClass()} animate-bounce hidden sm:block"></div>
 
