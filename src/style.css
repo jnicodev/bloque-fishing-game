@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+.texture-dot {
+    background-image: url("/public/sprites/texture.svg");
+}
+
+.texture-wood {
+    background-image: url("/public/sprites/topography.svg");
+    background-size: 300px;
+}
+
+.texture-water {
+    background-image: url("/public/sprites/wiggle.svg");
+    background-size: 40px;
+}
+
+.texture-floor {
+    background-image: url("/public/sprites/parkay-floor.svg");
+    background-size: 60px;
+}
+
+.fisherman-1 {
+    background: url("/public/sprites/fisherman-1.svg") center/cover;
+}
+
+.fisherman-2 {
+    background: url("/public/sprites/fisherman-2.svg") center/cover;
+}
+
+.fisherman-3 {
+    background: url("/public/sprites/fisherman-3.svg") center/cover;
+}
+
+.fisherman-4 {
+    background: url("/public/sprites/fisherman-4.svg") center/cover;
+}
+
+.fish {
+    background: url("/public/sprites/fish.svg") center/cover;
+}
+
+.old-man {
+    background: url("/public/sprites/old-man.svg") center/cover;
+}
+
+.box {
+    background: url("/public/sprites/box.svg") center/cover;
+}
+
+@keyframes move-right {
+    0% {
+        transform: translateX(-1564px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.move-right {
+    animation: move-right 20s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        background-position-x: 0;
+    }
+    50% {
+        background-position-x: -40px;
+    }
+    100% {
+        background-position-x: 0;
+    }
+}
+
+.walk {
+    animation: walk 1s steps(1) infinite;
+}

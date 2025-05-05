@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+    <title>Bloque Fish Game</title>
+    <meta name="description" content="My Awesome App description">
+    <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/sprites/fish.svg" />
+    <meta name="theme-color" content="#DDDDDD">
+    <link rel='stylesheet' href='/src/style.css'>
+</head>
+
+<body class="texture-dot sm:p-10">
+<div class="text-center bg-white mb-10">
+    <h1 class="font-black text-2xl">🚀 Bloque Fishing Game</h1>
+    <div class="font-light">Presented by <a class="text-sky-400" href="https://www.jnico.dev" target="_blank">Jnico</a></div>
+</div>
+
+<div class="max-w-7xl border-4 mx-auto">
+    <div class="flex flex-col">
+        <h1 class="font-black text-xl text-white tracking-widest p-3 bg-black">Market</h1>
+
+        <div class="w-full h-32 flex items-center bg-yellow-300 texture-floor overflow-hidden">
+            <div class="flex gap-20 move-right" id="market"></div>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="font-black text-xl text-white tracking-widest p-3 bg-black">Leaderboard</h2>
+
+        <div class="grid grid-cols-3 bg-amber-100">
+            <div class="col-span-2 bg-sky-400 texture-water animate-pulse" id="water"></div>
+
+            <div class="col-span-1 bg-amber-600 pt-5 border-l-2 border-black wood relative" id="beach">
+                <div class="flex flex-col gap-5 absolute -left-52" id="players"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script
+        type="module"
+        src="/src/main.js"></script>
+</body>
+</html>
